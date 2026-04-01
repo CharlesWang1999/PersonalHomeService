@@ -4,7 +4,7 @@ Spring Boot 个人服务项目。
 
 ## 技术栈
 
-- Java 21
+- Java 23
 - Spring Boot 3.2.3
 - Maven
 
