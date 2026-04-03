@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: app-user
+  datasource:
+    url: ${DATABASE_URL:jdbc:mysql://localhost:3306/personal_home}
+    username: ${DATABASE_USERNAME:root}
+    password: ${DATABASE_PASSWORD:root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+
+jwt:
+  secret: ${JWT_SECRET:your-256-bit-secret-key-here-must-be-at-least-32-characters}
+  access-token-validity-ms: ${JWT_ACCESS_TOKEN_VALIDITY_MS:3600000}
+  refresh-token-validity-ms: ${JWT_REFRESH_TOKEN_VALIDITY_MS:604800000}
+
+server:
+  port: ${APP_USER_PORT:8081}

@@ -37,3 +37,6 @@ build/
 
 ### Claude ###
 .claude/
+
+### Postman ###
+.postman/
